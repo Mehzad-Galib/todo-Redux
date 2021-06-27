@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.App {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.todo-react {
+	margin-right: 100px;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	height: 100vh;
+	background-color: rgb(238, 238, 238);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0 auto;
+	max-width: 90%;
+}
+form {
+	width: 400px;
+	min-width: 250px;
+	padding: 25px;
+	background-color: rgb(255, 255, 255);
+	margin-top: 35px;
+	border-radius: 7px;
+}
+.reduxFormStyle {
+	background-color: rgb(105 105 105 / 12%);
+}
+
+form h2 {
+	margin-bottom: 20px;
+}
+form input {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	font-size: 1rem;
+	margin: 15px 0;
+	border: 1px solid lightgray;
+}
+
+form input:focus {
+	outline: 1.5px solid royalblue;
+}
+.btn {
+	cursor: pointer;
+	background-color: rgba(88, 125, 238, 0.925);
+	color: white;
+	outline: none;
+	border: none;
+	margin-top: 15px;
+	border-radius: 3px;
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.all-todo {
+	margin-top: 30px;
+	max-width: 400px;
+	max-height: 350px;
+	min-width: 250px;
+	overflow-y: scroll;
+}
+.all-todo::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+.all-todo::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+/* Handle */
+
+.all-todo::-webkit-scrollbar-thumb {
+	background: rgba(117, 117, 117, 0.589);
+}
+.all-todo h2 {
+	font-size: 1.6rem;
+}
+
+.todo-div {
+	margin-top: 10px;
+	background-color: white;
+	padding: 15px 10px;
+	box-shadow: 3px 5px 32px rgb(0, 0, 0, 0.1);
+	border-radius: 2px;
+}
+
+.todo-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.todo-header .delete-todo {
+	cursor: pointer;
+	font-size: 1.3rem;
+	color: red;
+}
+
+.todo-div .todo-title {
+	font-size: 1.4rem;
+	color: rgba(65, 105, 225, 0.699);
+}
+
+.todo-div .todo-description {
+	color: #a3a3a3;
+	font-size: 0.95rem;
+	padding-top: 5px;
+}
+
+@media (max-width: 928px) {
+	.todo-react {
+		margin-right: 0;
+		border-bottom: 2px solid lightgray;
+	}
+	.App {
+		flex-wrap: wrap;
+	}
+	.all-todo {
+		padding-bottom: 50px;
+	}
+}
